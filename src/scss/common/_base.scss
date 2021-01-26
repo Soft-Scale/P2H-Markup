@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+body{
+    font-family: 'SF Pro Display';
+    background: #F4F5F7;
+    overflow-x: hidden;
+}
+ul, li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    transition: .3s;
+}
+.centre-align{
+    max-width: 940px;
+    margin: 0 auto;
+}
