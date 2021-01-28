@@ -1,7 +1,7 @@
 .footer{
-    padding: 50px 0 47px;
+    padding: 50px 20px 47px;
     background: url("/src/img/footer-bg.jpg") no-repeat;
-    background-size: contain;
+    background-size: cover;
 
     .centred{
         display: flex;
@@ -29,6 +29,9 @@
                 margin-left: 20px;
                 max-width: 260px;
             }
+            &:last-child{
+                margin-bottom: 0;
+            }
         }
 
         .footer-img{
@@ -38,6 +41,69 @@
         }
         
     }
+}
 
+// --- adaptive
+@media screen and (max-width: 1024px) {
+    .footer {
+        .footer-block {
+            .footer__title{
+                font-size: 24px;
+                line-height: 34px;
+            }
+            .contact{
+                font-size: 17px;
+            }
+            .footer-img{
+                max-width: 230px;
+            }
+        }
+    }
 
+}
+@media screen and (max-width: 900px) {
+    .footer {
+        padding: 40px 20px;
+        
+        .footer-block {
+            width: 50%;
+            
+            .footer-img{
+                bottom: -40px;
+            }
+            &:last-child{
+                width: 40%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+    .footer {
+        padding: 40px 20px;
+        
+        .footer-block {
+            width: 50%;
+            
+            &:last-child{
+                display: none;
+            }
+            
+        }
+    }
+}
+@media screen and (max-width: 560px) {
+    .footer {
+        .centred{
+            flex-direction: column;
+            max-width: 280px;
+        }        
+        .footer-block {
+            width: 100%;
+            margin-bottom: 40px;
+            
+            &:nth-child(2){
+                margin-bottom: 0;
+            }
+        }
+    }
 }

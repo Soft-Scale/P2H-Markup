@@ -1,7 +1,6 @@
 .header{
-    padding: 53px 0 53px;
-    height: 100%;
-    min-height: 925px;
+    padding: 53px 20px 53px;
+    height: 925px;
     background: url("/src/img/header-bg.jpg") no-repeat;
     background-size: cover;
 
@@ -25,11 +24,15 @@
             color: #fff;
         }
     }
+    .nav-mobile{
+        display: none;
+    }
     .nav{
         display: flex;
         justify-content: space-between;
         font-family: Arial;
         height: fit-content;
+        
         .nav__item{
             margin: 0 20px;
             position: relative;
@@ -62,6 +65,7 @@
             }
         }
     }
+    
 
     .header-container{
         display: flex;
@@ -113,5 +117,155 @@
             }
         }
     }
+}
 
+
+@media screen and (max-width: 1180px) {
+    .header{
+        height: 800px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .header{
+        height: 650px;
+        
+        .header-container {
+            .header-content{
+                width: 50%;
+            }
+            .header-side{
+                width: 45%;
+            }
+        }
+        
+    }
+}
+@media screen and (max-width: 800px) {
+    .header{
+        padding-bottom: 0;
+        height: auto;
+
+
+        .nav-desktop {
+            display: none;
+        }
+        .nav-mobile{
+            display: block;
+        }
+        
+        .header-container {
+            flex-direction: column;
+            .header-content{
+                width: 100%;
+                margin: 60px 0 30px;
+                .header-content__title{
+                    max-width: 100%;
+                }
+            }
+            .header-side{
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                .main-img{
+                    position: static;
+                    img{
+                        max-width: 300px;
+                        margin:0 -20px -2px 0;
+                    }
+                }
+            }
+        }
+        
+    }
+
+    .nav {
+        -webkit-transition: left 0.5s ease;
+        -moz-transition: left 0.5s ease;
+        -ms-transition: left 0.5s ease;
+        -o-transition: left 0.5s ease;
+        transition: left 0.5s ease;
+        background: #221f20;
+        color: #f1cdb3;
+        cursor: pointer;
+        font-size: 48px;
+        height: 100vh !important;
+        right: -100%;
+        padding: 120px 25px 25px;
+        position: fixed;
+        top: 0;
+        width: 320px;
+        z-index: 10;
+    
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+          }
+          &.expanded { right: 0; }
+      }
+    
+    
+    .nav-toggle {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        cursor: pointer;
+        position: relative;
+        height: 50px;
+        width: 50px;
+        padding: 10px;
+        z-index: 2;
+        background: #221f20;
+        color: #f1cdb3;
+        border-radius: 50%;
+        z-index: 11;
+    
+        .nav-toggle-bar, .nav-toggle-bar::after, .nav-toggle-bar::before{
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -ms-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+            background: #f1cdb3;
+            content: '';
+            height: 4px;
+            width: 30px;
+            border-radius: 4px;
+        }
+        .nav-toggle-bar { 
+            margin-top: 0; 
+        }
+        .nav-toggle-bar::after { 
+            margin-top: 0.7rem; 
+        }
+        .nav-toggle-bar::before { 
+            margin-top: -0.7rem;
+         }
+    
+        &.expanded .nav-toggle-bar { 
+            background: transparent; 
+        }
+    
+        &.expanded .nav-toggle-bar::after, &.expanded .nav-toggle-bar::before{
+            background: #f1cdb3;
+            margin-top: 0;
+        }
+        &.expanded .nav-toggle-bar::after{
+            -ms-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    
+        }
+        &.expanded .nav-toggle-bar::before{
+            -ms-transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+    
+    }
 }

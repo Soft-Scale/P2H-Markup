@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="built/css/app.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
 <body>
@@ -18,12 +19,25 @@
                 <span class="logo__description">Shelter for pets in Boston</span>
             </div>
             
-            <ul class="nav">
+            <ul class="nav nav-desktop">
                 <li class="nav__item"><a href="#about" class="nav__link">About the shelter</a></li>
                 <li class="nav__item"><a href="#our" class="nav__link">Our pets</a></li>
                 <li class="nav__item"><a href="#help-our" class="nav__link">To help the shelter</a></li>
                 <li class="nav__item"><a href="#contact" class="nav__link">Contacts</a></li>
             </ul>
+            <div class="navigation nav-mobile">
+                <div class="nav-toggle">
+                    <div class="nav-toggle-bar"></div>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li class="nav__item"><a href="#about" class="nav__link">About the shelter</a></li>
+                        <li class="nav__item"><a href="#our" class="nav__link">Our pets</a></li>
+                        <li class="nav__item"><a href="#help-our" class="nav__link">To help the shelter</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contacts</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
         <div class="header-container">
             <div class="header-content">
@@ -143,8 +157,6 @@
                         </div>
                         <div class="advantages__title">Shampoos</div>
                     </div>
-                </div>
-                <div class="advantages-column">
                     <div class="advantages__item">
                         <div class="advantages-box">
                             <img class="advantages__img" src="src/img/advant-6.png" alt="">
@@ -170,6 +182,9 @@
                         <div class="advantages__title">Sleeping area</div>
                     </div>
                 </div>
+                <!-- <div class="advantages-column">
+                    
+                </div> -->
             </div>
         </div>
     </section>
@@ -222,6 +237,7 @@
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 <script src="./built/js/app.min.js"></script>
+
 
 </body>
 </html>

@@ -1,10 +1,6 @@
-.content{
-    
-}
-
 .about{
     background: #fafafa;
-    padding: 90px 0;
+    padding: 90px 20px;
     .flex-style{
         align-items: center;
     }
@@ -89,10 +85,11 @@
             max-width: 270px;
             width: 100%;
             border-radius: 10px;
-            margin: 0 25px;
+            // margin: 0 25px;
             transition: .3s;
             .slider__img{
                 height: 226px;
+                max-width: inherit;
             }
             .slider__title{
                 font-size: 20px;
@@ -142,7 +139,7 @@
     }
 }
 .help-our{
-    padding: 70px 0;
+    padding: 70px 20px 40px;
 
     .help-our__title{
         max-width: 320px;
@@ -150,18 +147,18 @@
         text-align: center;
     }
     .advantages{
-        padding: 0 70px;
         .advantages-column{
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            margin-bottom: 80px;
             &:last-child{
                 margin-bottom: 0;
             }
         }
         .advantages__item{
             text-align: center;
-            margin: 0 60px;
+            width: 20%;
+            margin-bottom: 80px;
             height: 95px;
             &:last-child{
                 margin-right: 0;
@@ -185,7 +182,7 @@
     }
 }
 .donate{
-    padding: 70px 0 80px;
+    padding: 70px 20px 80px;
     background: #f6f6f6;
 
     .flex-style{
@@ -193,7 +190,11 @@
     }
 
     .donate-side{
-        width: 50%;
+        width: 44%;
+        margin-right: 6%;
+        img{
+            max-width: 100%;
+        }
     }
     .donate-content{
         width: 50%;
@@ -239,6 +240,119 @@
             line-height: 18px;
             color: #b2b2b2;
             max-width: 360px;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .donate{
+        
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    .our-friends {
+        .slider{
+            .slider__item {
+                margin: 0;
+            }
+        }
+        .splide{
+            .splide__arrow--prev{
+                left: -60px;
+                top: 50%;
+                transform: translateY(-50%) rotate(180deg);
+            }
+            .splide__arrow--next{
+                right: -60px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    } 
+}
+
+@media screen and (max-width: 800px) {
+    .about, .help-our,.our-friends{
+        padding: 40px 20px;
+    }
+    .about{
+        .flex-style{
+            flex-direction: column-reverse;
+        }
+        .about-side{
+            width: 40%;
+            margin-top: 40px;
+            img{
+                max-width: 180px;
+            }
+        }
+        .about-content{
+            width: 100%;
+            .about__title, .about__description{
+                max-width: 100%;
+            }
+        }
+    }  
+    .advantages{
+        .advantages-column{
+            .advantages__item{
+                width: 33.3%;
+            }
+        }
+    }
+    .donate{
+        .flex-style{
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        .donate-side{
+            width: 100%;
+            max-width: 327px;
+            margin-bottom: 40px;  
+        }
+        .donate-content{
+            width: 100%;
+            max-width: 360px;
+            margin: 0 auto;
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+
+    .our-friends {
+        
+        .splide{
+            .splide__arrows{
+                position: absolute;
+                bottom: -40px;
+                width: 120px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .splide__arrow--prev{
+                left: 0;
+            }
+            .splide__arrow--next{
+                right: 0;
+            }
+        }
+        .our-friends__button{
+            margin: 100px auto 0;
+        }
+    } 
+    .advantages{
+        .advantages-column{
+            .advantages__item{
+                width: 50%;
+            }
+        }
+    }
+    .donate{
+        .donate-content{
+            .donate__link-card{
+                font-size: 15px;
+            }
         }
     }
 }
