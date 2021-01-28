@@ -1,0 +1,244 @@
+.content{
+    
+}
+
+.about{
+    background: #fafafa;
+    padding: 90px 0;
+    .flex-style{
+        align-items: center;
+    }
+    .about-side{
+        width: 50%;
+        text-align: center;
+
+        .about-pets{
+            margin-right: -30px; 
+        }
+
+    }
+
+    .about-content{
+        width: 50%;
+    }
+
+    .about__title{
+        max-width: 315px;
+        margin-bottom: 35px;
+    }
+    .about__description{
+        font-size: 15px;
+        color: #4c4c4c;
+        font-family: Arial;
+        line-height: 24px;
+        margin-bottom: 30px;
+        max-width: 420px;
+
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+.our-friends{
+    background: #f6f6f6;
+    padding: 70px 0;
+    .our-friends__title{
+        text-align: center;
+        max-width: 400px;
+        margin: 0 auto 65px;
+        span{
+            display: block;
+        }
+    }
+    // .splide__slide {
+    //     max-width: 270px;
+    // }
+    .splide {
+        margin: 0 auto;
+
+        .splide__arrow{
+            border: 2px solid #f1cdb3;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            background: url("/src/img/slider-arrow.png") no-repeat center;
+            transition: .3s;
+
+            &:hover{
+                transition: .3s;
+                background: #f1cdb3 url("/src/img/slider-arrow.png") no-repeat center;
+            }
+        }
+        .splide__arrow--prev{
+            transform: rotate(180deg);
+            left: -80px;
+
+        }
+        .splide__arrow--next{
+            right: -80px;
+        }
+    }
+    .slider{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        .slider__item{
+            padding: 35px 40px;
+            background: #fafafa;
+            max-width: 270px;
+            width: 100%;
+            border-radius: 10px;
+            margin: 0 25px;
+            transition: .3s;
+            .slider__img{
+                height: 226px;
+            }
+            .slider__title{
+                font-size: 20px;
+                font-weight: normal;
+                color: #545454;
+                line-height: 54px;
+            }
+            .slider__button{
+                border: 2px solid #f1cdb3;
+                padding: 17px 0;
+                text-align: center;
+                color: #292929;
+                display: block;
+                border-radius: 25px;
+
+                &:hover{
+                    background: #f1cdb3;
+                }
+            }
+            &:hover{
+                transition: .3s;
+                background: #fff;
+                -webkit-box-shadow: 0px 0px 15px 0px #f1f1f1; 
+                box-shadow: 0px 0px 15px 0px #f1f1f1;
+            }
+            &:hover a{
+                background: #f1cdb3;
+            }
+        }
+    }
+
+    .our-friends__button{
+        width: 257px;
+        height: 53px;
+        line-height: 53px;
+        margin: 66px auto 0;
+        background: #f1cdb3;
+        border-radius: 25px;
+        display: block;
+        text-align: center;
+        font-size: 17px;
+        color: #292929;
+
+        &:hover{
+            background: #fddcc4;
+        }
+    }
+}
+.help-our{
+    padding: 70px 0;
+
+    .help-our__title{
+        max-width: 320px;
+        margin: 0 auto 65px;
+        text-align: center;
+    }
+    .advantages{
+        padding: 0 70px;
+        .advantages-column{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 80px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+        .advantages__item{
+            text-align: center;
+            margin: 0 60px;
+            height: 95px;
+            &:last-child{
+                margin-right: 0;
+            }
+            &:first-child{
+                margin-left: 0;
+            }
+        }
+        .advantages__title{
+            font-size: 20px;
+            font-weight: normal;
+            color: #545454;
+        }
+        .advantages-box{
+            height: 95px;
+        }
+        .advantages__img{
+            display: block;
+            margin: 0 auto 28px;
+        }
+    }
+}
+.donate{
+    padding: 70px 0 80px;
+    background: #f6f6f6;
+
+    .flex-style{
+        align-items: center;
+    }
+
+    .donate-side{
+        width: 50%;
+    }
+    .donate-content{
+        width: 50%;
+        .donate__title{
+            max-width: 360px;
+            margin-bottom: 30px;
+            span{
+                display: block;
+            }
+        }
+
+        .donate__bank{
+            font-size: 15px;
+            font-weight: normal;
+            color: #545454;
+            margin-bottom: 10px;
+            font-family: 'Times New Roman';
+        }
+        .donate__link-card{
+            margin-bottom: 30px;
+            max-width: 320px;
+            padding: 17px 15px 17px 44px;
+            text-align: center;
+            background: #f1cdb3;
+            border-radius: 10px;
+            font-size: 20px;
+            color: #292929;
+            position: relative;
+
+            &::before{
+                content: '';
+                width: 30px;
+                height: 24px;
+                position: absolute;
+                left: 14px;
+                top: 50%;
+                margin-top: -12px;
+                background: url("/src/img/bank-card.png") no-repeat;
+            }
+        }
+        .donate__description{
+            font-size: 12px;
+            line-height: 18px;
+            color: #b2b2b2;
+            max-width: 360px;
+        }
+    }
+}

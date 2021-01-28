@@ -4,7 +4,7 @@ const browserSync = require('browser-sync').create();
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify-es').default;
 const sass = require('gulp-sass');
-// const less = require('gulp-less');
+const less = require('gulp-less');
 const autoprefixer = require('gulp-autoprefixer');
 const cleancss = require('gulp-clean-css');
 const imagemin = require('gulp-imagemin');
@@ -67,7 +67,7 @@ function cleandist() {
      
 function startwatch() {
     watch(['src/**/*.js', '!src/**/*.min.js'], scripts);
-    watch('sass/**/*.scss', styles);
+    watch('src/scss/**/*.scss', styles);
     watch('./*.html').on('change', browserSync.reload);
     watch('src/images/**/*', images);
 }

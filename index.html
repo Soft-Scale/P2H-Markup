@@ -5,9 +5,223 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="built/css/app.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
     <title>Document</title>
 </head>
 <body>
+<header class="header">
+    <div class="centred">
+        <div class="header-info">
+            <div class="logo">
+                <a href="#" class="logo__name"> Cozy House</a>
+                <span class="logo__description">Shelter for pets in Boston</span>
+            </div>
+            
+            <ul class="nav">
+                <li class="nav__item"><a href="#" class="nav__link">About the shelter</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Our pets</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">To help the shelter</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Contacts</a></li>
+            </ul>
+        </div>
+        <div class="header-container">
+            <div class="header-content">
+                <h2 class="header-content__title">Not only people need a house</h2>
+                <p class="header-content__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida
+                    est in porttitor  porttitor. Duis sodales elementum ipsum, vehicula
+                    condimentum erat fringilla et.
+                </p>
+                <a href="#" class="header-content__button">Make a friend</a>
+                
+            </div>
+            <div class="header-side">
+                <picture class="main-img">
+                    <source srcset="src/img/dog-main.png" media="(min-width: 600px)">
+                    <img src="src/img/dog-main.png" alt="MDN">
+                </picture>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="content">
+    <section class="about">
+        <div class="centred flex-style">
+            <div class="about-side">
+                <picture class="about-pets">
+                    <source srcset="src/img/about-pets.png" media="(min-width: 600px)">
+                    <img src="src/img/about-pets.png" alt="MDN">
+                </picture>
+            </div>
+            <div class="about-content">
+                <h3 class="about__title title">About the shelter “Cozy House”</h3>
+                <p class="about__description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce efficitur blandit condimentum. Proin accumsan lorem vel gravida fringilla. Suspendisse potenti. Mauris ut pulvinar nunc.
+                </p>
+                <p class="about__description">
+                    Donec consectetur, diam in porta tempus, urna ligula vestibulum nibh, ac ornare felis justo nec leo. Praesent mattis nibh quis
+                    ultrices pharetra. Morbi tempus at ante sit amet tristique.
+                    Maecenas dignissim justo orci, in laoreet urna dapibus nec. Praesent quis tortor faucibus, tristique ante vitae, dignissim
+                    lorem. Sed at ligula et sem mattis gravida ac vel erat.
+                </p>
+            </div>
+        </div>
+
+    </section>
+    <section class="our-friends">
+        <div class="centred">
+            <h2 class="our-friends__title title"><span>Our friends who</span> are looking for a house</h2>
+            <div id="splide" class="splide">
+                <div class="splide__arrows">
+                    <button class="splide__arrow splide__arrow--prev">
+                    </button>
+                    <button class="splide__arrow splide__arrow--next">
+                    </button>
+                </div>
+                <div class="splide__track">
+                  <ul class="splide__list slider">
+                    
+                    <li class="splide__slide">
+                        <div class="slider__item splide__slide">
+                            <img src="src/img/slide-1.png" class="slider__img" alt="">
+                            <h4 class="slider__title">Katrine</h4>
+                            <a href="#" class="slider__button">Learn More</a>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="slider__item splide__slide">
+                            <img src="src/img/slide-2.png" class="slider__img" alt="">
+                            <h4 class="slider__title">Jennifer</h4>
+                            <a href="#" class="slider__button">Learn More</a>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="slider__item splide__slide">
+                            <img src="src/img/slide-3.png" class="slider__img" alt="">
+                            <h4 class="slider__title">Woody</h4>
+                            <a href="#" class="slider__button">Learn More</a>
+                        </div>
+                    </li>
+                  </ul>
+                </div>
+            </div>            
+            <a href="#" class="our-friends__button">Get to know the rest</a>
+        </div>
+    </section>
+    <section class="help-our">
+        <div class="centred">
+            <h2 class="help-our__title title">Than you can help our shelter</h2>
+            <div class="advantages">
+                <div class="advantages-column">
+                    <div class="advantages__item">
+                        <div class="advantages-box">
+                            <img class="advantages__img" src="src/img/advant-1.png" alt="">
+                        </div>
+                        <div class="advantages__title">Pet food</div>
+                    </div>
+                    <div class="advantages__item">
+                        <div class="advantages-box">
+                            <img class="advantages__img" src="src/img/advant-2.png" alt="">
+                        </div>
+                        <div class="advantages__title">Transportation</div>
+                    </div>
+                    <div class="advantages__item">
+                        <div class="advantages-box">
+                            <img class="advantages__img" src="src/img/advant-3.png" alt="">
+                        </div>
+                        <div class="advantages__title">Toys</div>
+                    </div>
+                    <div class="advantages__item">
+                        <div class="advantages-box">
+                            <img class="advantages__img" src="src/img/advant-4.png" alt="">
+                        </div>
+                        <div class="advantages__title">Bowls and cups</div>
+                    </div>
+                    <div class="advantages__item">
+                        <div class="advantages-box">
+                            <img class="advantages__img" src="src/img/advant-5.png" alt="">
+                        </div>
+                        <div class="advantages__title">Shampoos</div>
+                    </div>
+                </div>
+                <div class="advantages-column">
+                    <div class="advantages__item">
+                        <div class="advantages-box">
+                            <img class="advantages__img" src="src/img/advant-6.png" alt="">
+                        </div>
+                        <div class="advantages__title">Vitamins</div>
+                    </div>
+                    <div class="advantages__item">
+                        <div class="advantages-box">
+                            <img class="advantages__img" src="src/img/advant-7.png" alt="">
+                        </div>
+                        <div class="advantages__title">Medicines</div>
+                    </div>
+                    <div class="advantages__item">
+                        <div class="advantages-box">
+                            <img class="advantages__img" src="src/img/advant-8.png" alt="">
+                        </div>
+                        <div class="advantages__title">Collars / leashes</div>
+                    </div>
+                    <div class="advantages__item">
+                        <div class="advantages-box">
+                            <img class="advantages__img" src="src/img/advant-9.png" alt="">
+                        </div>
+                        <div class="advantages__title">Sleeping area</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="donate">
+        <div class="centred flex-style">
+            <div class="donate-side">
+                <img src="src/img/donate-dog.png" alt="">
+            </div>
+            <div class="donate-content">
+                <h4 class="donate__title title"><span> In addition, you</span> can make a donation</h4>
+                <div class="donate__bank">Name of the bank / Type of bank account</div>
+                <p class="donate__link-card">8380 2880 8028 8791 7435</p>
+                <p class="donate__description">
+                    Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a ipsum at libero sagittis dignissim sed
+                    ac diam. Praesent ultrices maximus tortor et vulputate. Interdum
+                    et malesuada fames ac ante ipsum primis in faucibus.
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="centred">
+        <div class="footer-block">
+            <h4 class="footer__title title">For questions and suggestions</h4>
+            <a href="mailto:email@shelter.com" class="contact email">
+                <img class="email__icon" src="src/img/icon-mail.png" alt="">
+                <span class="email__text">email@shelter.com</span>
+            </a>
+            <a href="tel:+13 674 567 75 54" class="contact phone">
+                <img class="phone__icon" src="src/img/icon-phone.png" alt="">
+                <span class="phone__text">+13 674 567 75 54</span>
+            </a>
+        </div>
+        <div class="footer-block">
+            <h4 class="footer__title">We are waiting for your visit</h4>
+            <a href="#" class="contact location">
+                <img class="location__icon" src="src/img/icon-geolocation.png" alt="">
+                <span class="location__text">Boston, Central Street, 1st (Entrance from the store)</span>
+            </a>
+            <a href="#" class="contact location">
+                <img class="location__icon" src="src/img/icon-geolocation.png" alt="">
+                <span class="location__text">London, South Park, 18st</span>
+            </a>
+        </div>
+        <div class="footer-block">
+            <img class="footer-img" src="src/img/footer-dog.png" alt="">
+        </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+<script src="./built/js/app.min.js"></script>
 
 </body>
 </html>

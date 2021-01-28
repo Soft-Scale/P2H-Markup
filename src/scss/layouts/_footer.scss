@@ -1,0 +1,43 @@
+.footer{
+    padding: 50px 0 47px;
+    background: url("/src/img/footer-bg.jpg") no-repeat;
+    background-size: contain;
+
+    .centred{
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer-block{
+        width: 33.3%;
+        position: relative;
+
+
+        .footer__title{
+            font-size: 35px;
+            line-height: 45px;
+            color: #fff;
+            margin-bottom: 30px;
+            max-width: 275px;
+        }
+        .contact{
+            display: flex;
+            font-size: 20px;
+            color: #f1cdb3;
+            align-items: center;
+            margin-bottom: 33px;
+            .email__text,.phone__text,.location__text{
+                margin-left: 20px;
+                max-width: 260px;
+            }
+        }
+
+        .footer-img{
+            position: absolute;
+            right: 0;
+            bottom: -47px;
+        }
+        
+    }
+
+
+}
