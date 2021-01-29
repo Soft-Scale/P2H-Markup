@@ -18,7 +18,14 @@ function browsersync() {
         online: true
     })
 }
-     
+
+function html() {
+    return src([
+        './index.html',
+    ])
+    .pipe(dest('dist/'))
+}
+
 function scripts() {
     return src([
 
@@ -56,7 +63,7 @@ function buildcopy() {
         'src/css/**/*.min.css',
         'src/js/**/*.min.js',
         'src/images/**/*',
-        'src/**/*.html',
+        './index.html',
         ], { base: 'dist' })
     .pipe(dest('dist'))
 }
@@ -73,10 +80,11 @@ function startwatch() {
 }
 
 exports.browsersync = browsersync;
+exports.html = html;
 exports.scripts = scripts;
 exports.styles = styles;
 exports.images = images;
 exports.cleanimg = cleanimg;
 
-exports.build = series(cleandist, styles, scripts, images, buildcopy);
+exports.build = series(cleandist, html, styles, scripts, images, buildcopy);
 exports.default = parallel(styles, scripts, browsersync, startwatch);
