@@ -26,7 +26,7 @@ function scripts() {
         ])
     .pipe(concat('app.min.js'))
     .pipe(uglify())
-    .pipe(dest('built/js/'))
+    .pipe(dest('dist/js/'))
     .pipe(browserSync.stream())
 }
      
@@ -36,7 +36,7 @@ function styles() {
     .pipe(concat('app.min.css'))
     .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
     .pipe(cleancss( { level: { 1: { specialComments: 0 } }/* , format: 'beautify' */ } ))
-    .pipe(dest('built/css/'))
+    .pipe(dest('dist/css/'))
     .pipe(browserSync.stream())
 }
      
@@ -44,11 +44,11 @@ function images() {
     return src('src/img/**/*')
     .pipe(newer('src/images/'))
     .pipe(imagemin())
-    .pipe(dest('built/images/'))
+    .pipe(dest('dist/images/'))
 }
      
 function cleanimg() {
-    return del('built/images/**/*', { force: true })
+    return del('dist/images/**/*', { force: true })
 }
      
 function buildcopy() {
@@ -57,12 +57,12 @@ function buildcopy() {
         'src/js/**/*.min.js',
         'src/images/**/*',
         'src/**/*.html',
-        ], { base: 'built' })
-    .pipe(dest('built'))
+        ], { base: 'dist' })
+    .pipe(dest('dist'))
 }
 
 function cleandist() {
-    return del('built/**/*', { force: true })
+    return del('dist/**/*', { force: true })
 }
      
 function startwatch() {
